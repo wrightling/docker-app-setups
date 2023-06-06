@@ -8,4 +8,5 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhisto
   && echo $SNIPPET >> "/root/.bashrc"
 
 
+EXPOSE 3000
 WORKDIR /app
