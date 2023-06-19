@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  rails-app:
+    build: .
+    volumes:
+      - .:/app
+      - bashhistory:/commandhistory
+      - rails-gems:/gems
+    ports:
+      - "6000:6000"
+
+volumes:
+  rails-gems:
+  bashhistory:
