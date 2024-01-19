@@ -7,7 +7,7 @@ RUN mkdir /commandhistory
 RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history" \
   && echo $SNIPPET >> "/root/.bashrc"
 
-EXPOSE 6000
+EXPOSE 3001
 WORKDIR /app
 ENV BUNDLE_PATH /gems
 ENV GEM_HOME /gems
