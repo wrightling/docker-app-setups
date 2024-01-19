@@ -10,6 +10,7 @@ RUN SNIPPET="export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhisto
 EXPOSE 6000
 WORKDIR /app
 ENV BUNDLE_PATH /gems
+ENV GEM_HOME /gems
 ENV PATH $BUNDLE_PATH/bin:$GEM_HOME/gems/bin:./node_modules/.bin:$PATH
 
 RUN gem install bundler
