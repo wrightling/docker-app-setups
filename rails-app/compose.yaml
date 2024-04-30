@@ -2,9 +2,11 @@ version: "3.8"
 
 services:
   rails-app:
-    build: .
+    build:
+      contest: .
+      dockerfile: Dockerfile.dev
     volumes:
-      - .:/app
+      - .:/rails
       - bashhistory:/commandhistory
       - rails-gems:/gems
     ports:
